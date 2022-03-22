@@ -1,13 +1,21 @@
 {
-    "cloudcode.active-kubeconfig": "minikube-config",
+    "cloudcode.active-kubeconfig": "Default KubeConfig",
     "cloudcode.kubeconfigs": [
         {
-            "name": "config-rh-worker0",
-            "configPath": "/Users/alknopfler/.kube/config-rh-worker0"
+            "name": "crio",
+            "configPath": "/root/crioeci/admin.conf"
         },
         {
-            "name": "minikube-config",
-            "configPath": "/home/alknopfler/.kube/config"
+            "name": "containerd",
+            "configPath": "/home/root/.kube/config"
         }
-    ]
+    ],
+    "go.toolsEnvVars": {
+        "GOPROXY": "https://goproxy.cn",
+        "GONOPROXY": "none;"
+    },
+    "terminal.integrated.env.linux": {
+        "GOPROXY": "https://goproxy.cn",
+        "GONOPROXY": "none;"
+    }
 }

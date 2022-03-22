@@ -10,10 +10,10 @@
             "watch": true,
             "cleanUp": true,
             "portForward": true,
-            "imageRegistry": "quay.io",
+            "imageRegistry": "registry.ks.io",
             "debug": [
                 {
-                    "image": "quay.io/amorgant/server-debug",
+                    "image": "registry.ks.io/amorgant/server-debug",
                     "containerName": "server-debug",
                     "sourceFileMap": {
                         "${workspaceFolder}": ""

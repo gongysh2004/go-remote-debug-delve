@@ -1,5 +1,6 @@
 FROM golang:1.16 AS build
 WORKDIR /
+ENV GOPROXY=https://goproxy.cn
 COPY . .
 RUN CGO_ENABLED=0 go get -ldflags "-s -w -extldflags '-static'" github.com/go-delve/delve/cmd/dlv
 RUN CGO_ENABLED=0 go build -gcflags "all=-N -l" -o ./app

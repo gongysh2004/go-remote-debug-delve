@@ -2,9 +2,9 @@ apiVersion: skaffold/v2beta19
 kind: Config
 build:
   artifacts:
-  - image: quay.io/amorgant/server-debug
-    buildpacks:
-      builder: gcr.io/buildpacks/builder:v1
+  - image: registry.ks.io/amorgant/server-debug
+    docker:
+      dockerfile: docker/debug/Dockerfile
     context: .
     sync: 
       auto: true 
